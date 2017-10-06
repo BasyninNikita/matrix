@@ -16,6 +16,7 @@ bool readmatr(int matrix[3][3])
                 success = false;
                 break;
             }
+        break;
     }
    
    return success;
