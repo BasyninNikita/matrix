@@ -11,14 +11,19 @@ bool readmatr(int matrix[3][3])
         getline( cin, string );
         istringstream stream( string );
             for(int j=0;j<3;j++)
+            {
             if( !( stream >> matrix[ i ][ j ] ) ) 
             {
                 success = false;
                 break;
             }
-        break;
+            }
+            if(!(success)) 
+            {
+                break;
+            }
     }
-   
+    
    return success;
 }
 int main()
@@ -71,10 +76,10 @@ int main()
             {
                for( int i = 0; i < 3; ++i )
                {
-                    for( int j = 0; j < 3; ++j ) 
+                    for( int j = 0; j < 2; ++j ) 
                     {
                         int result = 0;
-                        for( int k = 0; k < 3; ++k ) 
+                        for( int k = 0; k < 2; ++k ) 
                         {
                             result += matr1[i][k] * matr2[k][j];
                         }
